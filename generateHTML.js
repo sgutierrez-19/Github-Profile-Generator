@@ -1,27 +1,27 @@
 const colors = {
   green: {
-    wrapperBackground: "#E6E1C3",
-    headerBackground: "#C1C72C",
-    headerColor: "black",
-    photoBorderColor: "#black"
+    wrapperBackground: '#E6E1C3',
+    headerBackground: '#C1C72C',
+    headerColor: 'black',
+    photoBorderColor: '#black'
   },
   blue: {
-    wrapperBackground: "#5F64D3",
-    headerBackground: "#26175A",
-    headerColor: "white",
-    photoBorderColor: "#73448C"
+    wrapperBackground: '#5F64D3',
+    headerBackground: '#26175A',
+    headerColor: 'white',
+    photoBorderColor: '#73448C'
   },
   pink: {
-    wrapperBackground: "#879CDF",
-    headerBackground: "#FF8374",
-    headerColor: "white",
-    photoBorderColor: "#FEE24C"
+    wrapperBackground: '#879CDF',
+    headerBackground: '#FF8374',
+    headerColor: 'white',
+    photoBorderColor: '#FEE24C'
   },
   red: {
-    wrapperBackground: "#DE9967",
-    headerBackground: "#870603",
-    headerColor: "white",
-    photoBorderColor: "white"
+    wrapperBackground: '#DE9967',
+    headerBackground: '#870603',
+    headerColor: 'white',
+    photoBorderColor: 'white'
   }
 };
 
@@ -61,7 +61,7 @@ function generateHTML(response, color) {
   
           .wrapper {
               background-color:  ${colors[color].wrapperBackground};
-              padding-top: 100px;
+              padding-top: 50px;
           }
   
           body {
@@ -71,7 +71,7 @@ function generateHTML(response, color) {
           }
   
           main {
-              background-color: #E9EDEE;
+              background-color: #E9EDEE !important;
               height: auto;
               padding-top: 30px;
           }
@@ -117,7 +117,7 @@ function generateHTML(response, color) {
           .photo-header {
               position: relative;
               margin: 0 auto;
-              margin-bottom: -50px;
+              margin-bottom: -10px;
               display: flex;
               justify-content: center;
               flex-wrap: wrap;
@@ -180,8 +180,8 @@ function generateHTML(response, color) {
               display: flex;
               flex-wrap: wrap;
               justify-content: space-between;
-              margin-top: 20px;
-              margin-bottom: 20px;
+              margin-top: 10px;
+              margin-bottom: 10px;
           }
   
           .card {
@@ -256,7 +256,7 @@ function generateHTML(response, color) {
           </div>
           <div class="wrapper"></div>
       </div>
-  </body>`
-        }
+  </body>`;
+}
 
-module.exports = generateHTML
+module.exports = generateHTML;
