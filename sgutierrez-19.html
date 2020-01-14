@@ -1,32 +1,4 @@
-const colors = {
-  green: {
-    wrapperBackground: '#E6E1C3',
-    headerBackground: '#C1C72C',
-    headerColor: 'black',
-    photoBorderColor: '#black'
-  },
-  blue: {
-    wrapperBackground: '#5F64D3',
-    headerBackground: '#26175A',
-    headerColor: 'white',
-    photoBorderColor: '#73448C'
-  },
-  pink: {
-    wrapperBackground: '#879CDF',
-    headerBackground: '#FF8374',
-    headerColor: 'white',
-    photoBorderColor: '#FEE24C'
-  },
-  red: {
-    wrapperBackground: '#DE9967',
-    headerBackground: '#870603',
-    headerColor: 'white',
-    photoBorderColor: 'white'
-  }
-};
-
-function generateHTML(response, color) {
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
   
   <head>
@@ -60,7 +32,7 @@ function generateHTML(response, color) {
           }
   
           .wrapper {
-              background-color:  ${colors[color].wrapperBackground};
+              background-color:  #879CDF;
               padding-top: 50px;
           }
   
@@ -122,8 +94,8 @@ function generateHTML(response, color) {
               justify-content: center;
               flex-wrap: wrap;
   
-              background-color: ${colors[color].headerBackground};
-              color: ${colors[color].headerColor};
+              background-color: #FF8374;
+              color: white;
   
               padding: 10px;
               width: 95%;
@@ -137,7 +109,7 @@ function generateHTML(response, color) {
               object-fit: cover;
               margin-top: -75px;
   
-              border: 6px solid ${colors[color].photoBorderColor};
+              border: 6px solid #FEE24C;
               box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
           }
   
@@ -187,8 +159,8 @@ function generateHTML(response, color) {
           .card {
               padding: 20px;
               border-radius: 6px;
-              background-color: ${colors[color].headerBackground};
-              color: ${colors[color].headerColor};
+              background-color: #FF8374;
+              color: white;
               margin: 20px;
           }
   
@@ -216,30 +188,30 @@ function generateHTML(response, color) {
       <div class="main">
           <div class="wrapper">
               <div class="photo-header card main">
-                  <img class="photo-header" src="${response.data.avatar_url}" alt="Profile Image">
+                  <img class="photo-header" src="https://avatars3.githubusercontent.com/u/54040858?v=4" alt="Profile Image">
                   <h1>Hello!</h1>
-                  <h2>My GitHub name is ${response.data.login}</h2>
-                  <h3>currently @ ${response.data.company}</h3>
+                  <h2>My GitHub name is sgutierrez-19</h2>
+                  <h3>currently @ null</h3>
                   <nav class="links-nav">
                       <a class="nav-link" target="_blank" rel="noopener noreferrer"
-                          href="https://www.google.com/maps/place/${response.data.location}">${response.data.location}</a>
-                      <a href="${response.data.html_url}" target="_blank">GitHub</a>
-                      <a href="${response.data.blog}" target="_blank">Blog</a>
+                          href="https://www.google.com/maps/place/Fullerton, California">Fullerton, California</a>
+                      <a href="https://github.com/sgutierrez-19" target="_blank">GitHub</a>
+                      <a href="https://sgutierrez-19.github.io/portfolio/" target="_blank">Blog</a>
                   </nav>
               </div>
           </div>
           <div class="main">
-              <h2 class="photo-header black">${response.data.blog}</h2>
+              <h2 class="photo-header black">https://sgutierrez-19.github.io/portfolio/</h2>
   
               <div class="row">
                   <div class="card col">
                       <h5>Public Repositories</h5>
-                      <h6>${response.data.public_repos}</h6>
+                      <h6>20</h6>
                   </div>
   
                   <div class="card col">
                       <h5>Followers</h5>
-                      <h6>${response.data.followers}</h6>
+                      <h6>0</h6>
                   </div>
               </div>
               <div class="row">
@@ -250,13 +222,10 @@ function generateHTML(response, color) {
   
                   <div class="card col">
                       <h5>Following</h5>
-                      <h6>${response.data.following}</h6>
+                      <h6>0</h6>
                   </div>
               </div>
           </div>
           <div class="wrapper"></div>
       </div>
-  </body>`;
-}
-
-module.exports = generateHTML;
+  </body>
